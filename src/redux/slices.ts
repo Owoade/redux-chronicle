@@ -14,6 +14,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem(state, action: PayloadAction<ICartitem>) {
+        
       if (
         state.items.some(
           (item) =>
