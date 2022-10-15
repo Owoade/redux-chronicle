@@ -9,15 +9,22 @@ const breakpoints = createBreakpoints({
     xl: "1200px",
     "2xl": "1536px",
 });
-
-export const theme = extendTheme({
+const themeMap = {
+    light: {
+        bgColor: "white",
+        color: "black"
+    }, 
+    dark: {
+        bgColor: "black",
+        color: "white"
+    }
+}
+export const theme = (theme:Theme) => extendTheme({
     breakpoints,
     colors: {
-        brand: {
-            accent: "",
-            primaryText: "",
-            secondaryText: "",
-            mainText: ""
-        }
+        brand: themeMap[theme]
     }
 });
+
+type Theme = "light" | "dark";
+

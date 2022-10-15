@@ -1,1 +1,1 @@
-type Mode = "light" | "dark";
+type Theme = "light" | "dark";
